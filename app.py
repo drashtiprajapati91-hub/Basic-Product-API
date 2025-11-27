@@ -37,9 +37,7 @@ products = [
     }
 ]
 
-# ------------------------------
 # PRODUCT LIST (GET, POST)
-# ------------------------------
 
 class ProductList(Resource):
     def get(self):
@@ -70,9 +68,8 @@ class ProductList(Resource):
         return {"message": "Product added successfully", "product": new_product}, 201
 
 
-# ------------------------------
+
 # SINGLE PRODUCT (GET, PUT, DELETE)
-# ------------------------------
 
 class SingleProduct(Resource):
     def get(self, product_id):
@@ -99,9 +96,8 @@ class SingleProduct(Resource):
         return {"message": "Product deleted successfully"}
 
 
-# ------------------------------
+
 # Register API Routes
-# ------------------------------
 api.add_resource(ProductList, "/products")
 api.add_resource(SingleProduct, "/products/<int:product_id>")
 
